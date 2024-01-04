@@ -29,6 +29,4 @@ public class AreaController : ControllerBase
      
         return Address.ConvertToIC(res);
     }
-
-
 }
