@@ -1,25 +1,23 @@
 ﻿<Properties StartupConfiguration="{5147DD52-CFF8-4F76-83C4-1483CA8773ED}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="whattodo/Content/WeatherForecast.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.whattodo PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="whattodo/Controllers/DataController.cs">
     <Files>
-      <File FileName="whattodo/WeatherForecast.cs" />
-      <File FileName="whattodo/Controllers/WeatherForecastController.cs" />
-      <File FileName="whattodo/Controllers/AreaController.cs" Line="28" Column="1" />
-      <File FileName="whattodo/Program.cs" />
-      <File FileName="whattodo/Utilitites/HttpHelper.cs" />
-      <File FileName="whattodo/Content/Address.cs" />
-      <File FileName="whattodo/Content/WeatherForecast.cs" Line="12" Column="1" />
+      <File FileName="whattodo/Controllers/DataController.cs" Line="30" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="whattodo" expanded="True">
-            <Node name="whattodo" expanded="True">
-              <Node name="Content" expanded="True">
-                <Node name="WeatherForecast.cs" selected="True" />
+          <Node name="whattodo">
+            <Node name="whattodo">
+              <Node name="Controllers">
+                <Node name="DataController.cs" selected="True" />
               </Node>
-              <Node name="Controllers" expanded="True" />
               <Node name="Utilitites" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
@@ -28,9 +26,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.whattodo PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>

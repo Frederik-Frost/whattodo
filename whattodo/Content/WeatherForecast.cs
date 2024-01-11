@@ -28,21 +28,21 @@ namespace whattodo.Content
 
 	public class WeatherForecastResult
 	{
-		public string Type { get; set; }
-		public Geometry Geometry { get; set; }
-		public Properties Properties { get; set; }
+		public string? Type { get; set; }
+		public Geometry? Geometry { get; set; }
+		public Properties? Properties { get; set; }
 	}
 
 	public class Geometry
 	{
-		public string Type { get; set; }
-		public float[] Coordinates { get; set; }
+		public string? Type { get; set; }
+		public float[]? Coordinates { get; set; }
 	}
 
 	public class Properties
 	{
-		public Meta Meta { get; set; }
-		public List<Timeseries> Timeseries { get; set; }
+		public Meta? Meta { get; set; }
+		public List<Timeseries>? Timeseries { get; set; }
 	}
 
 	public class Meta
@@ -50,71 +50,71 @@ namespace whattodo.Content
 
 		[JsonPropertyName("updated_at")]
 		public DateTime UpdatedAt { get; set; }
-		public Units Units { get; set; }
+		public Units? Units { get; set; }
 	}
 
 	public class Units
 	{
 		[JsonPropertyName("air_pressure_at_sea_level")]
-		public string AirPressureAtSeaLevel { get; set; }
+		public string? AirPressureAtSeaLevel { get; set; }
 		[JsonPropertyName("air_temperature")]
-		public string AirTemperature { get; set; }
+		public string? AirTemperature { get; set; }
 		[JsonPropertyName("cloud_area_fraction")]
-		public string CloudAreaFraction { get; set; }
+		public string? CloudAreaFraction { get; set; }
 		[JsonPropertyName("precipitation_amount")]
-		public string PrecipitationAmount { get; set; }
+		public string? PrecipitationAmount { get; set; }
 		[JsonPropertyName("relative_humidity")]
-		public string RelativeHumidity { get; set; }
+		public string? RelativeHumidity { get; set; }
 		[JsonPropertyName("wind_from_direction")]
-		public string WindFromDirection { get; set; }
+		public string? WindFromDirection { get; set; }
 		[JsonPropertyName("wind_speed")]
-		public string WindSpeed { get; set; }
+		public string? WindSpeed { get; set; }
 	}
 
 	public class Timeseries
 	{
 		public DateTime Time { get; set; }
-		public Data Data { get; set; }
+		public Data? Data { get; set; }
 	}
 
 	public class Data
 	{
-		public Instant Instant { get; set; }
+		public Instant? Instant { get; set; }
 		[JsonPropertyName("next_12_hours")]
-		public Next12Hours Next12Hours { get; set; }
+		public Next12Hours? Next12Hours { get; set; }
 		[JsonPropertyName("next_1_hours")]
-		public Next1Hour Next1Hour { get; set; }
+		public Next1Hour? Next1Hour { get; set; }
 		[JsonPropertyName("next_6_hours")]
-		public Next6Hours Next6Hours { get; set; }
+		public Next6Hours? Next6Hours { get; set; }
 	}
 
 	public class Instant
 	{
-		public Details Details { get; set; }
+		public Details? Details { get; set; }
 	}
 
 	public class Next12Hours
 	{
-		public Summary Summary { get; set; }
-		public _Details Details { get; set; }
+		public Summary? Summary { get; set; }
+		public _Details? Details { get; set; }
 	}
 
 	public class Next1Hour
 	{
-		public Summary Summary { get; set; }
-		public _Details Details { get; set; }
+		public Summary? Summary { get; set; }
+		public _Details? Details { get; set; }
 	}
 
 	public class Next6Hours
 	{
-		public Summary Summary { get; set; }
-		public _Details Details { get; set; }
+		public Summary? Summary { get; set; }
+		public _Details? Details { get; set; }
 	}
 
 	public class Summary
 	{
 		[JsonPropertyName("symbol_code")]
-		public string SymbolCode { get; set; }
+		public string? SymbolCode { get; set; }
 	}
 
 	public class Details
@@ -136,7 +136,7 @@ namespace whattodo.Content
 	public class _Details
 	{
 		[JsonPropertyName("precipitation_amount")]
-		public float PrecipitationAmount { get; set; }
+		public float? PrecipitationAmount { get; set; }
 	}
 }
 

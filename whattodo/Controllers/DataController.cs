@@ -29,6 +29,7 @@ public class DataController : ControllerBase
             new CustomDataFormat("Visuelt center", "Byens koordinater", cityData.Visueltcenter, VariableType.List),
 
             // Weather meta
+            
             new CustomDataFormat("Meta_Updated at", "Last updated metadata", forecast.Properties.Meta.UpdatedAt, VariableType.Date),
             new CustomDataFormat("Meta_Units_Air temperature", "Temperature unit", forecast.Properties.Meta.Units.AirTemperature, VariableType.Text),
             new CustomDataFormat("Meta_Units_Cloud area fraction", "Cloud area unit", forecast.Properties.Meta.Units.CloudAreaFraction, VariableType.Text),
@@ -43,20 +44,20 @@ public class DataController : ControllerBase
         int i = 0;
         foreach (var timeInstance in forecast.Properties.Timeseries)
         {
-            variableStore.AddRange(new List<CustomDataFormat>{
+            variableStore.AddRange(new List<CustomDataFormat> {
                 new CustomDataFormat($"Timeseries_{i+1}_Time", "Time", timeInstance.Time, VariableType.Date),
-                new CustomDataFormat($"Timeseries_{i+1}_Instant_Details_Air temperature", "Air temp", timeInstance.Data.Instant.Details.AirTemperature, VariableType.Number),
+                new CustomDataFormat($"Timeseries_{i+1}_Instant_Details_Air temperature", "Air temp", timeInstance.Data.Instant.Details?.AirTemperature, VariableType.Number),
                 new CustomDataFormat($"Timeseries_{i+1}_Instant_Details_Cloud area fraction", "Clouds", timeInstance.Data.Instant.Details.CloudAreaFraction, VariableType.Number),
                 new CustomDataFormat($"Timeseries_{i+1}_Instant_Details_Relative humidity", "Relative humidity", timeInstance.Data.Instant.Details.RelativeHumidity, VariableType.Number),
                 new CustomDataFormat($"Timeseries_{i+1}_Instant_Details_Wind direction", "Wind direction", timeInstance.Data.Instant.Details.WindFromDirection, VariableType.Number),
                 new CustomDataFormat($"Timeseries_{i+1}_Instant_Details_Wind speed", "Wind speed", timeInstance.Data.Instant.Details.WindSpeed, VariableType.Number),
-
-                new CustomDataFormat($"Timeseries_{i+1}_Next 1 hours_Summary_Symbol code", "Symbol code", timeInstance.Data.Next1Hour.Summary.SymbolCode, VariableType.Number),
-                new CustomDataFormat($"Timeseries_{i+1}_Next 1 hours_Summary_PrecipitationAmount", "PrecipitationAmount", timeInstance.Data.Next1Hour.Details.PrecipitationAmount, VariableType.Number),
-                new CustomDataFormat($"Timeseries_{i+1}_Next 6 hours_Summary_Symbol code", "Symbol code", timeInstance.Data.Next6Hours.Summary.SymbolCode, VariableType.Number),
-                new CustomDataFormat($"Timeseries_{i+1}_Next 6 hours_Summary_PrecipitationAmount", "PrecipitationAmount", timeInstance.Data.Next6Hours.Details.PrecipitationAmount, VariableType.Number),
-                new CustomDataFormat($"Timeseries_{i+1}_Next 12 hours_Summary_Symbol code", "Symbol code", timeInstance.Data.Next12Hours.Summary.SymbolCode, VariableType.Number),
-                new CustomDataFormat($"Timeseries_{i+1}_Next 12 hours_Summary_PrecipitationAmount", "PrecipitationAmount", timeInstance.Data.Next12Hours.Details.PrecipitationAmount, VariableType.Number),
+                
+                // new CustomDataFormat($"Timeseries_{i+1}_Next 1 hours_Summary_Symbol code", "Symbol code", timeInstance.Data.Next1Hour.Summary.SymbolCode, VariableType.Number),
+                // new CustomDataFormat($"Timeseries_{i+1}_Next 1 hours_Summary_PrecipitationAmount", "PrecipitationAmount", timeInstance.Data.Next1Hour.Details.PrecipitationAmount, VariableType.Number),
+                // new CustomDataFormat($"Timeseries_{i+1}_Next 6 hours_Summary_Symbol code", "Symbol code", timeInstance.Data.Next6Hours.Summary.SymbolCode, VariableType.Number),
+                // new CustomDataFormat($"Timeseries_{i+1}_Next 6 hours_Summary_PrecipitationAmount", "PrecipitationAmount", timeInstance.Data.Next6Hours.Details.PrecipitationAmount, VariableType.Number),
+                // new CustomDataFormat($"Timeseries_{i+1}_Next 12 hours_Summary_Symbol code", "Symbol code", timeInstance.Data.Next12Hours.Summary.SymbolCode, VariableType.Number),
+                // new CustomDataFormat($"Timeseries_{i+1}_Next 12 hours_Summary_PrecipitationAmount", "PrecipitationAmount", timeInstance.Data.Next12Hours.Details.PrecipitationAmount, VariableType.Number),
             });
             i++;
         }
