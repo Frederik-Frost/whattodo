@@ -7,11 +7,11 @@ public class CustomDataFormat
     public string? Description { get; set; }
     public object? Value { get; set; }
 
-    public CustomDataFormat(string varName, string description, object value, VariableType type)
+    public CustomDataFormat(string varName, string description, object? value, VariableType type)
     {
         Description = description;
         Name = varName;
-        Value = value;
+        Value = value ?? new object();
         Type = type;
     }
 }
